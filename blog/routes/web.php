@@ -25,6 +25,17 @@ route::get('/index', function () {
 	echo "uji coba route dengan methode GET";
 });
 
+Route::get('/produk/show', 'produkController@show');
+
+Route::get('/produk', 'produkController@index');
+route::get('/halaman', function() {
+	$title = 'harry poter' ;
+	$konten = 'harry potter and the deathly hallows : part 2';
+	return view('konten.halaman', compact('title','konten'));
+} ) ;
+
+
+
 //route::post ('/store', function () {
 	//sintak untuk menyimpan data
 
