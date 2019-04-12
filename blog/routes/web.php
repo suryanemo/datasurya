@@ -15,6 +15,12 @@ Route::get('/welcome', function () {
 echo "Welcome";
 });
 
+route::get('/pelanggan', 'pelangganController@index');
+
+route::resource('produk','produkControllerCURD');
+
+Route::resource('produk','produkController');
+
 
 Route::get('/hello', function () {
 	return '<center><h1>hello world</h1>
