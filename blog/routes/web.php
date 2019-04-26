@@ -17,9 +17,9 @@ echo "Welcome";
 
 route::get('/pelanggan', 'pelangganController@index');
 
-route::resource('produk','produkControllerCURD');
+// route::resource('produk','produkControllerCURD');
 
-Route::resource('produk','produkController');
+// Route::resource('produk','produkController');
 
 
 Route::get('/hello', function () {
@@ -31,9 +31,11 @@ route::get('/index', function () {
 	echo "uji coba route dengan methode GET";
 });
 
-Route::get('/produk/show', 'produkController@show');
+// Route::get('/produk/show', 'produkController@show');
 
-Route::get('/produk', 'produkController@index');
+// Route::get('/produk', 'produkController@index');
+
+
 route::get('/halaman', function() {
 	$title = 'harry poter' ;
 	$konten = 'harry potter and the deathly hallows : part 2';
@@ -84,3 +86,9 @@ route::get('/create', function () {
 	})->name('create');
 
 route::get('/produk', 'produkController@index');
+
+
+route::get('/produk/store', 'produkController@store');
+route::get('/produk/update','produkcontroller@update');
+route::get('/produk/delete','produkcontroller@delete');
+
